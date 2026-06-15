@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "make -j$(nproc)",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "make clean",
+            "group": "build",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "Flash",
+            "type": "shell",
+            "command": "make flash",
+            "group": "build",
+            "dependsOn": "Build",
+            "presentation": {
+                "reveal": "always"
+            }
+        }
+    ]
+}

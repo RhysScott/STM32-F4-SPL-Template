@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "STM32F4",
+            "includePath": [
+                "${workspaceFolder}/User",
+                "${workspaceFolder}/cmsis/include",
+                "${workspaceFolder}/cmsis/device",
+                "${workspaceFolder}/lib"
+            ],
+            "defines": [
+                "STM32F40_41xxx",
+                "USE_STDPERIPH_DRIVER"
+            ],
+            "compilerPath": "/Users/scott/arm-gnu-toolchain/arm-gnu-toolchain-15.2.rel1-darwin-arm64-arm-none-eabi/bin/arm-none-eabi-gcc",
+            "cStandard": "c99",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/User",
+                    "${workspaceFolder}/cmsis/include",
+                    "${workspaceFolder}/cmsis/device",
+                    "${workspaceFolder}/lib"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}
