@@ -44,6 +44,13 @@ RAM (xrw)      : ORIGIN = 0x20000000, LENGTH = 320K
 FLASH (rx)      : ORIGIN = 0x8000000, LENGTH = 1536K
 }
 
+/* Define program headers for correct segment permissions */
+PHDRS
+{
+  flash PT_LOAD FLAGS(5);  /* PF_R | PF_X = 5 */
+  ram   PT_LOAD FLAGS(6);  /* PF_R | PF_W = 6 */
+}
+
 /* Define output sections */
 SECTIONS
 {

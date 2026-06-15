@@ -15,8 +15,7 @@ void initGpio() {
 int main(void)
 {
     GPIO_ResetBits(GPIOF, GPIO_Pin_9);
-    while (1)
-    {
+    while (1) {
 
 
     }
